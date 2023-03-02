@@ -104,25 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-function proxy_on() {
-    export http_proxy=http://127.0.0.1:7890
-    export https_proxy=http://127.0.0.1:7890
-    echo -e "Proxy is on."
-}
-
-function proxy_off() {
-    unset http_proxy https_proxy
-    echo -e "Proxy is off."
-}
-
-# Add OpenJDK
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-unset CONDA_SHLVL
-# Use the below command in the Terminal to remove duplicates in the $PATH
-# typeset -U path
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
