@@ -35,7 +35,7 @@ set expandtab
 set backup
 
 " Backup directory.
-set backupdir=~/.vim/backup/
+"set backupdir=~/.vim/backup/
 
 " Do not let cursor scroll below or above N number of lines when scrolling.
 set scrolloff=10
@@ -77,21 +77,6 @@ set wildmode=list:longest
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
-
-
-" PLUGINS ---------------------------------------------------------------- {{{
-
-call plug#begin('~/.vim/plugged')
-
-
-  Plug 'dense-analysis/ale'
-
-  Plug 'preservim/nerdtree'
-
-
-call plug#end()
-
-" }}}
 
 
 " MAPPINGS --------------------------------------------------------------- {{{
@@ -139,14 +124,6 @@ augroup END
 
 " If the current file type is HTML, set indentation to 2 spaces.
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
-
-" If Vim version is equal to or greater than 7.3 enable undofile.
-" This allows you to undo changes to a file even after saving it.
-if version >= 703
-    set undodir=~/.vim/backup
-    set undofile
-    set undoreload=10000
-endif
 
 " You can split a window into sections by typing `:split` or `:vsplit`.
 " Display cursorline and cursorcolumn ONLY in active window.
