@@ -72,8 +72,10 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-syntax-highlighting
+  fast-syntax-highlighting
+  zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,3 +124,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Proxy Settings
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
